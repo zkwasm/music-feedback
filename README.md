@@ -167,7 +167,7 @@ echo '{"hook_event_name":"Stop","last_assistant_message":"build failed"}' \
 An honest list:
 
 - **Pressing ESC / Ctrl+C** to interrupt Claude → Stop does not fire → no sound (there's no UserInterrupt hook yet; unfixable).
-- **Non-English replies**: success/failure rely on English keywords, so e.g. a Chinese "失败/请确认" won't match → a normally-completed turn is heard as success. **But real errors come through `StopFailure`, which alarms regardless of language**; questions are also caught via `?`.
+- **Non-English replies**: success/failure rely on English keywords, so a reply written in another language (e.g. "it failed" / "please confirm" in non-English) won't match → a normally-completed turn is heard as success. **But real errors come through `StopFailure`, which alarms regardless of language**; questions are also caught via `?`.
 - **Permissions auto-approved/skipped** (acceptEdits / bypassPermissions / allowlist) → no prompt → no "action" sound.
 - **Same-priority collision**: a busy speaker drops a newly arriving equal/lower-priority sound (by design, to avoid overlap).
 - No sound when the system is **muted / volume 0**, or in **SSH/CI** environments (intentionally silenced).
