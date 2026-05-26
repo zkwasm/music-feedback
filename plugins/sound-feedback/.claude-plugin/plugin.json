@@ -1,0 +1,9 @@
+{
+  "name": "sound-feedback",
+  "displayName": "Sound Feedback",
+  "description": "Instant macOS audio cues for Claude Code lifecycle events (success / failure / needs-you / API alarm / long-task-done / session start-end / compact / idle), with priority-based preemption and optional spoken 'which session' announcements via `say`. Zero dependencies, zero config.",
+  "version": "1.0.0",
+  "author": { "name": "Tom", "email": "masstensor@gmail.com" },
+  "keywords": ["hooks", "audio", "sound", "notification", "macos", "feedback", "tts", "afplay"],
+  "license": "MIT"
+}

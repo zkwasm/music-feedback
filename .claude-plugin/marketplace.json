@@ -1,0 +1,14 @@
+{
+  "name": "music-feedback",
+  "description": "Audio-feedback tools for Claude Code on macOS.",
+  "owner": { "name": "Tom", "email": "masstensor@gmail.com" },
+  "metadata": { "description": "Audio-feedback tools for Claude Code on macOS." },
+  "plugins": [
+    {
+      "name": "sound-feedback",
+      "source": "./plugins/sound-feedback",
+      "description": "Instant macOS audio cues for Claude Code lifecycle events, with priority preemption and spoken session announcements.",
+      "version": "1.0.0"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "hooks": {
+    "Stop": [
+      { "matcher": "*", "hooks": [ { "type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/feedback.sh" } ] }
+    ],
+    "SubagentStop": [
+      { "matcher": "*", "hooks": [ { "type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/feedback.sh" } ] }
+    ],
+    "StopFailure": [
+      { "matcher": "*", "hooks": [ { "type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/feedback.sh" } ] }
+    ],
+    "SessionStart": [
+      { "matcher": "*", "hooks": [ { "type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/feedback.sh" } ] }
+    ],
+    "SessionEnd": [
+      { "matcher": "*", "hooks": [ { "type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/feedback.sh" } ] }
+    ],
+    "PreCompact": [
+      { "matcher": "*", "hooks": [ { "type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/feedback.sh" } ] }
+    ],
+    "PreToolUse": [
+      { "matcher": "*", "hooks": [ { "type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/feedback.sh" } ] }
+    ],
+    "PostToolUse": [
+      { "matcher": "*", "hooks": [ { "type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/feedback.sh" } ] }
+    ],
+    "Notification": [
+      { "matcher": "permission_prompt|idle_prompt|elicitation_dialog", "hooks": [ { "type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/feedback.sh" } ] }
+    ]
+  }
+}
