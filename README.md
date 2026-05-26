@@ -80,12 +80,12 @@ music-feedback/
 
 ### 作为 Plugin 安装（推荐）
 
-在 Claude Code 里：
+在 Claude Code 里一键安装：
 ```
-/plugin marketplace add /Users/tom/ai-workspace/music-feedback
+/plugin marketplace add zkwasm/music-feedback
 /plugin install sound-feedback@music-feedback
 ```
-> 推送到 GitHub 后，第一行可换成 `/plugin marketplace add <owner>/<repo>`，别人即可一键安装。
+> 或从本地路径：`/plugin marketplace add /path/to/music-feedback`。
 
 plugin 的 hook 与你已有的 `settings.json` hook **叠加共存**，不冲突。安装后 `/hooks` 可见，
 改动后用 `/reload-plugins`（或重开会话）生效。自带命令：`/sound-feedback:demo`、`:mute`、`:unmute`。
