@@ -1,5 +1,9 @@
 ---
-description: Unmute Claude sound feedback (removes ~/.claude/feedback.off)
+description: Unmute Claude sound feedback
 allowed-tools: Bash(rm:*)
 ---
-!`rm -f "$HOME/.claude/feedback.off" && echo "🔔 sound-feedback unmuted"`
+Unmute the sound-feedback plugin by removing its sentinel file, then confirm to the user:
+
+```bash
+rm -f "$HOME/.claude/feedback.off" && echo "sound-feedback unmuted"
+```

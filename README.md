@@ -100,6 +100,18 @@ claude plugin validate ./plugins/sound-feedback   # plugin
 claude plugin validate .                          # marketplace
 ```
 
+### Update
+```
+/plugin marketplace update music-feedback
+/reload-plugins
+```
+
+### Uninstall
+```
+/plugin uninstall sound-feedback@music-feedback
+```
+Runtime files are left behind (safe to delete): `rm -rf ~/.claude/feedback.state ~/.claude/feedback.off ~/.claude/feedback.conf`
+
 ---
 
 ## Configuration
@@ -172,6 +184,7 @@ An honest list:
 - **Same-priority collision**: a busy speaker drops a newly arriving equal/lower-priority sound (by design, to avoid overlap).
 - No sound when the system is **muted / volume 0**, or in **SSH/CI** environments (intentionally silenced).
 - The `idle` subtype relies on an `idle_prompt` marker in the payload; if the real field differs, idle plays as "action" instead (idle is off by default, so low impact).
+- **long-tool timing keys on `session_id`** (one timestamp per session). Tools running *in parallel* in the same session share that timestamp, so elapsed time can be mis-measured. Sequential tools — the common case (e.g. a long test run) — are accurate.
 
 ### Not in v1 (add on demand)
 Linux support, DND/Focus/screen-share auto-mute, GUI config, sound-pack themes, an automatic `settings.json` merge installer.
